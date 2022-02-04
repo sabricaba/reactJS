@@ -1,9 +1,19 @@
 import './App.css';
 import NavBar from './components/NavBar';
+import Text from './components/ItemListContainer';
+import CarWidget from './components/CarWidget';
 
 function App() {
   return (
-    <NavBar />
+    <>
+      <header>
+          <NavBar />
+          <CarWidget />
+      </header>
+      <section>
+          <Text />
+      </section>
+    </>
   );
 };
 

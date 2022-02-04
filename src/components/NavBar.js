@@ -3,7 +3,7 @@ import image from '../images/logo/1.png';
 
 const NavBar= () => {
     return (
-        <header>
+        <div className="navUno">
             <a href="#"><img className="logoPrincipal" src={image} alt="" /></a>
             <nav className="navTemporal">
                     <ul>
@@ -18,7 +18,7 @@ const NavBar= () => {
                         </li>
                     </ul>
             </nav>
-        </header>
+        </div>
     );
 };
 

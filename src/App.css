@@ -7,32 +7,42 @@
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  position: sticky;
-  top:0;
   width: 100%;
+  position: sticky;
   background-color: #f4fffb;
   color: #03898e;
   border: 1px solid #03898e;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  justify-content: space-between;
+
 }
 
-header .logoPrincipal {
+.carrito {
+  padding-right: 24px;
+}
+
+
+.navUno {
+  display: flex;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.logoPrincipal {
   max-width: 100px;
 }
 
 nav ul {
   display: flex;
-  justify-content: space-between;
+  margin-bottom: 0px;
+  padding-left: 0px;
+  justify-self: center;
+  width: 100%;
 }
 
 nav ul li { 
   text-decoration: none; 
   list-style-type: none;
-  padding-right: 5px;
+  
 } 
 
 
