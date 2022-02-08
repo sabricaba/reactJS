@@ -62,3 +62,15 @@ nav ul li a.nav-link.active {
   text-decoration: underline;
 }
 
+/* Button */
+
+.addCart {
+  display: flex;
+}
+
+button {
+  background-color: #f4fffb;
+  color: #03898e;
+  border: 1px solid #03898e;
+  margin-left: 10px;
+}
