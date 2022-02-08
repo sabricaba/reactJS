@@ -1,17 +1,13 @@
 import './App.css';
 import NavBar from './components/NavBar';
-import Text from './components/ItemListContainer';
-import CarWidget from './components/CarWidget';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
   return (
     <>
-      <header>
-          <NavBar />
-          <CarWidget />
-      </header>
+      <NavBar />
       <section>
-          <Text />
+          <ItemListContainer title="Hola Flavio, buenas noches!"/>
       </section>
     </>
   );

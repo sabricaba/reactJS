@@ -1,7 +1,7 @@
-const Text = () => {
+const ItemListContainer = (props) => {
     return (
-        <p>Hola Flavio, buenas noches!</p>
+        <p>{props.title}</p>
     );
 };
 
-export default Text;
+export default ItemListContainer;
