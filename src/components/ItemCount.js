@@ -19,19 +19,12 @@ const ItemCount = (props) => {
         };
     };
 
-    const onAdd = () => {
-        if(addCart<props.stock) {
-            console.log(`Usted agrego ${addCart} unidades al carrito`)
-        }
-    }
-
-
     return(
         <div className="addCart"> 
             <button onClick={increment}>Add</button>
             <label>{addCart}</label>
             <button onClick={decrement}>Delete</button>
-            <button onClick={onAdd}>Add to Cart</button>
+            <button onClick={()=>props.onAdd(addCart)}>Add to Cart</button>
         </div>
     );
 
