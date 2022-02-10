@@ -7,7 +7,7 @@ function App() {
     <>
       <NavBar />
       <section>
-          <ItemListContainer title="Hola Flavio, buenas noches!"/>
+          <ItemListContainer title="Bienvenid@, conozca nuestros productos!"/>
       </section>
     </>
   );

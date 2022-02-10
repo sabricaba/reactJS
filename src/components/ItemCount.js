@@ -5,8 +5,6 @@ const ItemCount = (props) => {
 
     const [addCart, setAddCart] = useState(props.initial);
 
-    console.log(addCart)
-
     const increment = () => {
         if(addCart<props.stock) {
             setAddCart(addCart+1)
