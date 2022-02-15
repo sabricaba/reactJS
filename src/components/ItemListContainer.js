@@ -34,8 +34,8 @@ const ItemListContainer = (props) => {
 
     return (
         <>
-            <p>{props.title}</p>
-            <ItemList product={product2}/>
+            {/* <p>{props.title}</p> */}
+            {/* <ItemList product={product2}/>  */}
         </>
     );
 };
