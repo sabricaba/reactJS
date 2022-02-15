@@ -1,6 +1,5 @@
 import ItemList from "./ItemList";
-import { useState } from "react";
-import Item from "./Item";
+import { useEffect, useState } from "react";
 
 const productos = [
     {id:1, nombre:"Alimento para gato", precio:1550, imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo0g8eGxjj7CvakIVDcT9yAA8GPnP9NKN2KQ&usqp=CAU"},
@@ -11,31 +10,32 @@ const productos = [
     {id:6, nombre:"Juguetes", precio:1950, imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgs9XfTSdDAA1vYEz7dq4FoQ-aAAFQ-oW5AA&usqp=CAU"}
 ];
 
+
 const ItemListContainer = (props) => {
+    const [product2, setProduct2] = useState([]);
 
-    let is_ok= true;
+    useEffect(() => {
+        function makeRequest() {
+            new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (true){
+                        resolve();
+                    } else {
+                        reject("404: Error not found")
+                    }
+                }, 2000);
+            })
+            .then(() => setProduct2(productos))
+            .catch((error) => alert(error));
+        }
 
-    const promise = (data, time) => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                if (is_ok){
-                    resolve(data);
-                } else {
-                    reject("404: Error not found")
-                }
-            }, time);
-        });
-    };
-
-    promise(productos, 2000)
-    .then((data) => console.log("Estos son mis productos: ", data))
-    .catch((error) => alert(error));
-
+        makeRequest();
+    }, [])
 
     return (
         <>
             <p>{props.title}</p>
-            <ItemList product={productos}/>
+            <ItemList product={product2}/>
         </>
     );
 };
