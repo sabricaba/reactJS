@@ -9,6 +9,7 @@ const ItemList = (props) => {
                     nombre={element.nombre}
                     precio={element.precio}
                     imagen={element.imagen}
+                    id={element.id}
                     />
                 )}
             )}
