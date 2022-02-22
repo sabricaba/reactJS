@@ -1,8 +1,5 @@
 import ItemCount from "./ItemCount";
-import { Link, useParams } from "react-router-dom";
-import productos from "../utilitis/productos";
-import { useEffect } from "react";
-
+import { Link } from "react-router-dom";
 
 const Item = (props) => {
     const onAddAlert = (counter) => {

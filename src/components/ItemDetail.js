@@ -1,9 +1,14 @@
 import ItemCount from "./ItemCount";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import CartButton from "./CartButton";
 
 const ItemDetail = (props) => {
+    const [itemCount, setItemCount] = useState(0)
     const onAddAlert = (counter) => {
-        alert(`Usted agrego ${counter} unidades al carrito`)    
-    }
+        alert(`Usted agrego ${counter} unidades al carrito`);
+        setItemCount (counter);
+    };
     
     return (
         <div>
@@ -11,7 +16,11 @@ const ItemDetail = (props) => {
             <p>Precio: {props.precio}</p>
             <p>Descripción: {props.descripcion}</p>
             <img src={props.imagen}></img>
-            <ItemCount initial={1} stock={10} onAdd={onAddAlert}/>
+            {
+            itemCount === 0
+            ? <ItemCount stock = {10} initial = {itemCount} onAdd = {onAddAlert} />
+            : <Link to={"/cart"}><CartButton /></Link>
+            }
         </div>
     )
 };

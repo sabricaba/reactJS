@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
 import productos from "../utilitis/productos";
 
+
 const ItemDetailConteiner = () => {
     const [producto3, setProducto3] = useState(null);
 
@@ -13,8 +14,6 @@ const ItemDetailConteiner = () => {
                 setTimeout(() => {
                     if (true){
                         resolve();
-                    } else {
-                        reject("404: Error not found")
                     }
                 }, 2000);
             })
