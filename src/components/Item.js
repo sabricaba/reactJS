@@ -1,10 +1,6 @@
-import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 
 const Item = (props) => {
-    const onAddAlert = (counter) => {
-        alert(`Usted agrego ${counter} unidades al carrito`)    
-    }
 
     console.log({props})
 
@@ -14,7 +10,6 @@ const Item = (props) => {
             <p>Precio: {props.precio}</p>
             <img src={props.imagen}></img>
             <Link to={`/item/${props.id}`}><button>Ver descripción</button></Link>
-            <ItemCount initial={1} stock={5} onAdd={onAddAlert}/>
         </div>
     )
 };
