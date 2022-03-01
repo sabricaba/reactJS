@@ -26,6 +26,7 @@ const ItemDetailConteiner = () => {
     return(
         <div>
             <ItemDetail
+            id={producto3.id}
             nombre={producto3.nombre}
             precio={producto3.precio}
             imagen={producto3.imagen}

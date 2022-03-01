@@ -16,7 +16,7 @@ const NavBar= () => {
                             <Link style={{textDecoration: "none", color: "#03898e" }} to="/category/Otros"><li> Otras mascotas </li></Link>
                         </ul>
                 </nav>
-                <CarWidget />
+                <Link style={{textDecoration: "none", color: "#03898e" }} to="./cart"> <CarWidget /> </Link>
             </div>
 
         </header>
