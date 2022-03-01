@@ -43,7 +43,7 @@ const CartContextProvider = ({children}) => {
 
     const totalItem = (id) => {
         let total = cartList.map(item => item.id).indexOf(id);
-        return cartList[total].costItem * cartList[total].qtyItem;
+        return cartList[total].precio * cartList[total].qty;
     }
 
     const totales = () => {
@@ -52,11 +52,11 @@ const CartContextProvider = ({children}) => {
     }
 
     const impuestos = () => {
-        return totales * 0.21;
+        return totales() * 0.21;
     }
 
     const totalFinal = () => {
-        return totales - impuestos;
+        return totales() + impuestos();
     }
 
 
