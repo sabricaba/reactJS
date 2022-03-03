@@ -15,9 +15,12 @@ const ItemDetailConteiner = () => {
             const docRef = doc(db, "productos", idProduct);
             const docSnap = await getDoc(docRef);
             if (docSnap.exists()) {
-            console.log("Document data:", docSnap.data());
+                return {
+                    id: idProduct,
+                    ...docSnap.data()
+                }
             } else {
-            console.log("No such document!");
+            console.log("Producto no encontrado");
             }
         }
         makeRequest()
