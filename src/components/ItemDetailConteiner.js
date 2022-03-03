@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
-import productos from "../utilitis/productos";
+import { doc, getDoc } from "firebase/firestore";
+import db from "../utilitis/fireBaseConfig";
 
 
 const ItemDetailConteiner = () => {
@@ -10,14 +11,17 @@ const ItemDetailConteiner = () => {
     const {idProduct} = useParams();
 
     useEffect(() => {
-            new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    if (true){
-                        resolve();
-                    }
-                }, 2000);
-            })
-            .then(() => setProducto3(productos.find(item => item.id === idProduct)))
+        const makeRequest = async () => {
+            const docRef = doc(db, "productos", idProduct);
+            const docSnap = await getDoc(docRef);
+            if (docSnap.exists()) {
+            console.log("Document data:", docSnap.data());
+            } else {
+            console.log("No such document!");
+            }
+        }
+        makeRequest()
+            .then(result => setProducto3(result))
             .catch((error) => alert(error));
     }, [idProduct])
 

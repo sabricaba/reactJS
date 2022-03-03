@@ -48,18 +48,25 @@ const productos = [
     imagen: "https://www.centroveterinariobarbanza.es/cuidados_img8829t1.jpg",
     category:"Otros"},
 
-    {id:"6", 
+    {id:"8", 
     descripcion: "Los premios mas ricos, asi se aprende mejor!", 
     nombre:"Premios", 
     precio:550, 
     imagen:"https://i1.wp.com/pawsomedoglife.com/wp-content/uploads/2019/08/Pawsome-BLog-Premios-Caseros-Calabaza.jpg?fit=700%2C900&ssl=1",
     category:"Perros"},
 
-    {id:"7", 
+    {id:"9", 
     descripcion: "¿Qué incluye? Selección de 7 productos adaptados al tamaño de tu mascota. Una caja con pelotas interactivas, juguetes temáticos, golosinas masticables, huesos, snacks 100% naturales, productos de higiene. ¡Generamos una experiencia única en cada compra!", 
-    nombre:"Juguetes", 
+    nombre:"Juguetes para perros", 
     precio:1950, 
     imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgs9XfTSdDAA1vYEz7dq4FoQ-aAAFQ-oW5AA&usqp=CAU",
-    category: "Perros"}
+    category: "Perros"},
+
+    {id:"10", 
+    descripcion: "¿Qué incluye? Selección de 7 productos adaptados al tamaño de tu mascota. Una caja con pelotas interactivas, juguetes temáticos, golosinas masticables, huesos, snacks 100% naturales, productos de higiene. ¡Generamos una experiencia única en cada compra!", 
+    nombre:"Juguetes para gatos", 
+    precio:1950, 
+    imagen: "https://soyungato.com/wp-content/uploads/2020/05/gato-jugando-con-un-mordedor.jpg",
+    category: "Gatos"}
 ]
 export default productos;
