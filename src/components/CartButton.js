@@ -1,6 +1,8 @@
+import Button from 'react-bootstrap/Button';
+
 const CartButton = () =>{
     return(
-        <button>Ver carrito</button>
+        <Button variant="outline-dark">Ver carrito</Button>
 
     );
 };

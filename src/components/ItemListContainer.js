@@ -15,7 +15,7 @@ const ItemListContainer = (props) => {
                 id: document.id,
                 ...document.data()
             }))
-            return data;
+            return idCategory ? data.filter(item => item.category === idCategory) : data;
         }
         makeRequest()
             .then(result => setProduct2(result))

@@ -1,4 +1,5 @@
 import {useState} from "react";
+import Button from 'react-bootstrap/Button';
 
 const ItemCount = (props) => {
 
@@ -18,10 +19,10 @@ const ItemCount = (props) => {
 
     return(
         <div className="addCart"> 
-            <button onClick={increment}>Add</button>
+            <Button variant="outline-dark" onClick={increment}>Add</Button>
             <label>{addCart}</label>
-            <button onClick={decrement}>Delete</button>
-            <button onClick={()=>props.onAdd(addCart)}>Add to Cart</button>
+            <Button variant="outline-dark" onClick={decrement}>Delete</Button>
+            <Button variant="outline-dark" onClick={()=>props.onAdd(addCart)}>Add to Cart</Button>
         </div>
     );
 

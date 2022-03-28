@@ -3,6 +3,9 @@ import { useContext } from 'react';
 import { Link } from "react-router-dom";
 import { serverTimestamp, setDoc, collection, doc } from 'firebase/firestore';
 import db from '../utilitis/fireBaseConfig';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import { ListGroup, ListGroupItem } from 'react-bootstrap';
 
 const Cart = () => {
 
@@ -43,28 +46,43 @@ const Cart = () => {
 
     return(
         <>
-        <Link to="/"><button>Seguir comprando</button></Link>
+        <Link to="/"><Button variant="outline-dark">Seguir comprando</Button></Link>
             {
                 (test.cartList.length > 0) 
-                ? <button onClick={test.clear}>Borrar carrito</button>
+                ? <Button variant="outline-dark" onClick={test.clear}>Borrar carrito</Button>
                 : <p>El carrito esta vacio</p>
             }
             {test.cartList.length > 0 &&
                 test.cartList.map(item => (
                     <div>
-                        <img src={item.imagen} alt=""></img>
-                        <p>Nombre: {item.nombre} </p>
-                        <p>Precio: {item.precio} c/uno</p>
-                        <p>Cantidad: {item.qty}</p>
-                        <button onClick={() => test.removeItem(item.id)}>Eliminar producto</button>
+                        <Card style={{ width: '18rem' }}>
+                        <Card.Img variant="top" src={item.imagen} />
+                        <Card.Body>
+                            <ListGroup className="list-group-flush">
+                                <ListGroupItem>{item.nombre}</ListGroupItem>
+                                <ListGroupItem>Precio: {item.precio}</ListGroupItem>
+                                <ListGroupItem>Cantidad: {item.qty}</ListGroupItem>
+                            </ListGroup>
+                            <Button variant="outline-dark" onClick={() => test.removeItem(item.id)}>Eliminar producto</Button>
+                        </Card.Body>
+                        </Card>
                     </div>
             ))}
             {test.cartList.length > 0 &&
                 <div>
-                    <p>Subtotal: {test.totales()}</p>
-                    <p>Impuestos: {test.impuestos()}</p>
-                    <h2>Total: {test.totalFinal()}</h2>
-                    <button onClick={createOrder}>Create order</button>
+                    <Card className="text-center">
+                    <Card.Header as="h3">Total carrito</Card.Header>
+                    <Card.Body> 
+                        <Card.Text>
+                        Subtotal: {test.totales()}
+                        </Card.Text>
+                        <Card.Text>
+                        Impuestos: {test.impuestos()}
+                        </Card.Text>
+                        <Card.Title>Total a pagar: {test.totalFinal()}</Card.Title>
+                        <Button variant="outline-dark" onClick={createOrder}>Crear orden de compra</Button>
+                    </Card.Body>
+                    </Card>
                 </div>
             }
         </>

@@ -1,16 +1,20 @@
 import { Link } from "react-router-dom";
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 const Item = (props) => {
 
     console.log({props})
 
     return (
-        <div>
-            <h1>{props.nombre}</h1>
-            <p>Precio: {props.precio}</p>
-            <img src={props.imagen}></img>
-            <Link to={`/item/${props.id}`}><button>Ver descripción</button></Link>
-        </div>
+            <Card style={{ width:'20%' }} >
+                <Card.Img variant="top" src={props.imagen} style={{ height:'200px' }} />
+                <Card.Body>
+                    <Card.Title>{props.nombre}</Card.Title>
+                    <Card.Text>Precio: {props.precio}</Card.Text>
+                    <Link to= {`/item/${props.id}`}><Button variant="outline-dark">Ver descripción</Button></Link>
+                </Card.Body>
+            </Card>
     )
 };
 

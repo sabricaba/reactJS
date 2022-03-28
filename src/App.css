@@ -5,58 +5,20 @@
 
 /* Header */
 header {
-  display: flex;
   align-items: center;
   width: 100%;
-  position: sticky;
   background-color: #f4fffb;
   color: #03898e;
   border: 1px solid #03898e;
-  justify-content: space-between;
-
-}
-
-.carrito {
-  padding-right: 24px;
-}
-
-
-.navUno {
-  display: flex;
-  align-items: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .logoPrincipal {
   max-width: 100px;
 }
 
-nav ul {
-  width: 100%;
-}
-
-nav ul li { 
-  display: inline;
-  align-items: center;
-  text-decoration: none; 
-  list-style-type: none;
-} 
-
-nav ul li:hover {
-  text-decoration: none;
-  color:black;
-}
-
-
-/* Button */
-
-.addCart {
+.divBody {
   display: flex;
-}
-
-button {
-  background-color: #f4fffb;
-  color: #03898e;
-  border: 1px solid #03898e;
-  margin-left: 10px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 25px;
 }

@@ -2,7 +2,7 @@ import Item from "./Item"
 
 const ItemList = (props) => {
     return(
-        <div>
+        <div className="divBody">
             {props.product.map((element) => {
                 return (
                     <Item 
