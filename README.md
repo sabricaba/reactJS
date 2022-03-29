@@ -15,9 +15,6 @@ Las herramientas que utilice para crear este proyecto fueron:
 * HTML 
 
 
-https://user-images.githubusercontent.com/72116337/160515793-46a18521-232b-4879-b5f5-d9857e3919e5.mp4
-
-
 ## Autores ✒️
 * *Sabrina Victoria Cabaña* - Trabajo Inicial - [sabricaba](https://github.com/sabricaba)
 
